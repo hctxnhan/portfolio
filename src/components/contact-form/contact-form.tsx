@@ -6,6 +6,7 @@ import {
   ContactFormMessage,
   ContactFormName,
 } from './contact-form.style';
+import Button from '../button/button';
 function ContactForm() {
   return (
     <StyledContactForm>
@@ -18,6 +19,9 @@ function ContactForm() {
       <ContactFormMessage>
         <FormInput type={FormInputType.MULTILINE}>Message</FormInput>
       </ContactFormMessage>
+      <ContactFormButton>
+        <Button>Send</Button>
+      </ContactFormButton>
     </StyledContactForm>
   );
 }

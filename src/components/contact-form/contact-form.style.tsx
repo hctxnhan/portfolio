@@ -11,4 +11,7 @@ export const ContactFormEmail = styled.div``;
 export const ContactFormMessage = styled.div`
   grid-column: 1/ 3;
 `;
-export const ContactFormButton = styled.div``;
+export const ContactFormButton = styled.div`
+  grid-column: 2;
+  justify-self: end;
+`;

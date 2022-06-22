@@ -32,6 +32,7 @@ export const SectionContent = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  padding: 4rem 0;
 `;
 
 export const StyledSection = styled('div')`

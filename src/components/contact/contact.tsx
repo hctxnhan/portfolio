@@ -1,4 +1,4 @@
-import { StyledContact } from './contact.style';
+import { StyledContact, ContactFormContainer } from './contact.style';
 import Section from '../section/section';
 import ContactForm from '../contact-form/contact-form';
 function Contact() {
@@ -8,7 +8,9 @@ function Contact() {
         heading='CONTACT'
         subheading={`Let's talk about you a little bit`}
       >
-        <ContactForm></ContactForm>
+        <ContactFormContainer>
+          <ContactForm />
+        </ContactFormContainer>
       </Section>
     </StyledContact>
   );
