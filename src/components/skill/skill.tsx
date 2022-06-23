@@ -7,6 +7,8 @@ import {
 } from './skill.style';
 import { FunctionComponent } from 'react';
 import { useState } from 'react';
+import { useViewportScroll } from 'framer-motion';
+
 type SkillProps = {
   name: string;
   progress: number;

@@ -30,7 +30,7 @@ export const StyledTimelineItem = styled(motion.div)`
   }
 `;
 
-export const TimelineItemContainer = styled.div`
+export const TimelineItemContainer = styled(motion.div)`
   background-color: var(--color-primary-light);
   padding: 2rem 3rem;
   border-radius: 5px;

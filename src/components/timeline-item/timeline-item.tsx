@@ -11,16 +11,33 @@ type Props = {
   heading: string;
   description: string;
   date: string;
+  right: boolean;
 };
 
 const TimelineItem: FunctionComponent<Props> = ({
   date,
   description,
   heading,
+  right,
 }) => {
+  const variants = {
+    init: {
+      x: right ? 200 : -200,
+      opacity: 0,
+    },
+    inView: {
+      opacity: 1,
+      x: 0,
+    },
+  };
   return (
     <StyledTimelineItem>
-      <TimelineItemContainer>
+      <TimelineItemContainer
+        variants={variants}
+        initial={'init'}
+        whileInView={'inView'}
+        transition={{ duration: 0.8, type: 'tween' }}
+      >
         <TimelineItemDate>{date}</TimelineItemDate>
         <TimelineItemContent>
           <TimelineItemHeading>{heading}</TimelineItemHeading>

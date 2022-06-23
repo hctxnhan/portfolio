@@ -6,6 +6,7 @@ function Timeline() {
     <StyledTimeline>
       {timeline.map((item, index) => (
         <TimelineItem
+          right={index % 2 === 0 ? false : true}
           key={item.id}
           date={item.date}
           heading={item.heading}

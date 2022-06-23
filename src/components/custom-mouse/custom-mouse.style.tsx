@@ -6,7 +6,7 @@ export const StyledCustomMouse = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 9999;
   mix-blend-mode: difference;
 `;
 

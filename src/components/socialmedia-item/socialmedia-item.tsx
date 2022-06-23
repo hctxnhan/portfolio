@@ -1,6 +1,6 @@
 import { StyledSocialMediaItem } from './socialmedia-item.style';
 import { FunctionComponent } from 'react';
-import useHover from '../withHover/withHover';
+import useHover from '../useHover/withHover';
 import {
   SocialMediaItemIcon,
   SocialMediaItemLink,
