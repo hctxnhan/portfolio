@@ -4,6 +4,7 @@ export const StyledTimeline = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  gap: 2rem;
 
   &::after {
     content: '';
