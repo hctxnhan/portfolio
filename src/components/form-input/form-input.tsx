@@ -4,7 +4,7 @@ import {
   MessageFormInput,
 } from './form-input.style';
 import { FunctionComponent } from 'react';
-import withHover from '../withHover/withHover';
+import useHover from '../withHover/withHover';
 type Props = {
   children: string;
   type: FormInputType;
@@ -17,14 +17,23 @@ export enum FormInputType {
 }
 
 const FormInput: FunctionComponent<Props> = ({ children, type }) => {
+  const hoverEvent = useHover();
   switch (type) {
     case FormInputType.EMAIL:
-      return <EmailFormInput type='email' placeholder={children} />;
+      return (
+        <EmailFormInput {...hoverEvent} type='email' placeholder={children} />
+      );
     case FormInputType.MULTILINE:
-      return <MessageFormInput placeholder={children} />;
+      return (
+        <MessageFormInput
+          {...hoverEvent}
+          onClick={() => console.log()}
+          placeholder={children}
+        />
+      );
     default:
-      return <StyledFormInput placeholder={children} />;
+      return <StyledFormInput {...hoverEvent} placeholder={children} />;
   }
 };
 
-export default withHover(FormInput);
+export default FormInput;

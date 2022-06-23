@@ -1,26 +1,25 @@
 import MouseHoverContext from '../../context/hover/hover';
-import React, { Fragment, useContext } from 'react';
-type Props = {
-  children: React.ReactNode;
+import { useContext } from 'react';
+
+type MouseHoverEventProps = {
+  onMouseEnter: React.MouseEventHandler;
+  onMouseLeave: React.MouseEventHandler;
 };
 
-function withHover<T extends Props>(Element: React.FunctionComponent<T>) {
-  return (props: T) => {
-    const { setHover } = useContext(MouseHoverContext);
+function useHover(): MouseHoverEventProps {
+  const { setHover } = useContext(MouseHoverContext);
 
-    const handleOnMouseEnter = (e: React.MouseEvent): void => {
-      setHover?.(true);
-    };
-    const handleOnMouseLeave = (e: React.MouseEvent): void => {
-      setHover?.(false);
-    };
+  const handleOnMouseEnter = (e: React.MouseEvent): void => {
+    setHover?.(true);
+  };
+  const handleOnMouseLeave = (e: React.MouseEvent): void => {
+    setHover?.(false);
+  };
 
-    return (
-      <div onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
-        <Element {...(props as T)}>{props.children}</Element>
-      </div>
-    );
+  return {
+    onMouseEnter: handleOnMouseEnter,
+    onMouseLeave: handleOnMouseLeave,
   };
 }
 
-export default withHover;
+export default useHover;
