@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 export const StyledButton = styled.button`
-  cursor: pointer;
-
   padding: 1rem 3rem;
   font-family: var(--font-styled-text);
   text-transform: uppercase;

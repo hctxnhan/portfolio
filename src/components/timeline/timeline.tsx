@@ -6,6 +6,7 @@ function Timeline() {
     <StyledTimeline>
       {timeline.map((item, index) => (
         <TimelineItem
+          key={item.id}
           date={item.date}
           heading={item.heading}
           description={item.description}

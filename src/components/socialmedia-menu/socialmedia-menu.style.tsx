@@ -7,7 +7,7 @@ export const StyledSocialMediaMenu = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
+  z-index: 100;
   &::after {
     content: '';
     height: 10rem;

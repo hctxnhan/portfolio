@@ -4,7 +4,7 @@ import {
   MessageFormInput,
 } from './form-input.style';
 import { FunctionComponent } from 'react';
-
+import withHover from '../withHover/withHover';
 type Props = {
   children: string;
   type: FormInputType;
@@ -27,4 +27,4 @@ const FormInput: FunctionComponent<Props> = ({ children, type }) => {
   }
 };
 
-export default FormInput;
+export default withHover(FormInput);

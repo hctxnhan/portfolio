@@ -1,5 +1,7 @@
 import { StyledSocialMediaItem } from './socialmedia-item.style';
 import { FunctionComponent } from 'react';
+import withHover from '../withHover/withHover';
+import { useState } from 'react';
 import {
   SocialMediaItemIcon,
   SocialMediaItemLink,
@@ -10,12 +12,27 @@ type Props = {
 };
 
 const SocialMediaItem: FunctionComponent<Props> = ({ children, link }) => {
+  const [isHover, setHover] = useState(false);
   return (
-    <StyledSocialMediaItem>
+    <StyledSocialMediaItem
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      whileHover={{
+        scale: 1.5,
+      }}
+    >
       <SocialMediaItemIcon>{children}</SocialMediaItemIcon>
-      <SocialMediaItemLink>{link}</SocialMediaItemLink>
+      {/* <SocialMediaItemLink
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 5,
+        }}
+      >
+        {link}
+      </SocialMediaItemLink> */}
     </StyledSocialMediaItem>
   );
 };
 
-export default SocialMediaItem;
+export default withHover(SocialMediaItem);

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-
-export const StyledTimelineItem = styled.div`
+import { motion } from 'framer-motion';
+export const StyledTimelineItem = styled(motion.div)`
   width: 50%;
   text-align: right;
   padding: 0rem 2rem;

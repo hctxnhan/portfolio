@@ -1,5 +1,5 @@
 // about me (contact info) / education / skills / works / contact
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 import Header from './components/header/header';
 import About from './components/about/about';
 import Education from './components/education/education';
@@ -7,16 +7,23 @@ import Skills from './components/skills/skills';
 import SocialMediaMenu from './components/socialmedia-menu/socialmedia-menu';
 import NavigationBar from './components/navigation-bar/navigation-bar';
 import Contact from './components/contact/contact';
+import CustomMouse from './components/custom-mouse/custom-mouse';
+import MouseHoverContext from './context/hover/hover';
 const App: FunctionComponent = () => {
+  const [isHover, setHover] = useState(false);
+
   return (
     <div className='App'>
-      <Header />
-      <About />
-      <Education />
-      <Skills />
-      <Contact />
-      <SocialMediaMenu />
-      <NavigationBar />
+      <MouseHoverContext.Provider value={{ isHover, setHover }}>
+        <Header />
+        <About />
+        <Education />
+        <Skills />
+        <Contact />
+        <SocialMediaMenu />
+        <NavigationBar />
+        <CustomMouse />
+      </MouseHoverContext.Provider>
     </div>
   );
 };
