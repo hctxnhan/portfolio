@@ -10,19 +10,31 @@ import {
 function SocialMediaMenu() {
   return (
     <StyledSocialMediaMenu>
-      <SocialMediaItem link='facebook.com/social'>
+      <SocialMediaItem
+        link='https://www.facebook.com/nhan2947'
+        text='facebook.com/nhan2947'
+      >
         <FaFacebook />
       </SocialMediaItem>
-      <SocialMediaItem link='github.com/social'>
+      <SocialMediaItem
+        link='https://www.github.com/hctxnhan'
+        text='github.com/hctxnhan'
+      >
         <FaGithub />
       </SocialMediaItem>
-      <SocialMediaItem link='instagram.com/social'>
+      <SocialMediaItem
+        link='https://www.instagram.com/_hctnhan_'
+        text='instagram.com/_hctnhan_'
+      >
         <FaInstagram />
       </SocialMediaItem>
-      <SocialMediaItem link='nhan@gmail.com'>
+      <SocialMediaItem link='https://www.' text='hctxnhan@gmail.com'>
         <FaGoogle />
       </SocialMediaItem>
-      <SocialMediaItem link='linkedin.com/social'>
+      <SocialMediaItem
+        link='https://www.linkedin.com/in/hctnhan/'
+        text='linkedin.com/in/hctnhan/'
+      >
         <FaLinkedin />
       </SocialMediaItem>
     </StyledSocialMediaMenu>

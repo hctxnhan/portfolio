@@ -4,13 +4,16 @@ export const StyledSocialMediaItem = styled(motion.div)`
   display: flex;
   align-items: center;
 `;
-export const SocialMediaItemIcon = styled.div`
+export const SocialMediaItemIcon = styled.a`
+  text-decoration: none;
+  color: inherit;
+  display: block;
   svg {
     width: 2rem;
     height: 2rem;
   }
 `;
-export const SocialMediaItemLink = styled(motion.p)`
+export const SocialMediaItemLink = styled(motion.a)`
   position: absolute;
   left: 120%;
   top: 0;
