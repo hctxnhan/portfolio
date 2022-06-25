@@ -3,7 +3,6 @@ import Section from '../section/section';
 import WorkItem from '../work-item/work-item';
 import { works } from '../../data';
 import { useEffect, useRef, useState } from 'react';
-import { useElementScroll } from 'framer-motion';
 function Works() {
   const ref = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
