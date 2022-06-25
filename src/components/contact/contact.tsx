@@ -11,7 +11,7 @@ import { AnimatePresence } from 'framer-motion';
 function Contact() {
   const [isFocus, setFocus] = useState(false);
   return (
-    <StyledContact>
+    <StyledContact id='contact'>
       <Section
         heading='CONTACT'
         subheading={`Let's talk about you a little bit`}
@@ -28,7 +28,7 @@ function Contact() {
                 opacity: 0,
               }}
               animate={{
-                opacity: 0.7,
+                opacity: 0.9,
               }}
               exit={{
                 opacity: 0,

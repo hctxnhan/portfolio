@@ -6,8 +6,6 @@ type Position = {
   y: number;
 };
 
-type MouseScale = 0.8 | 1 | 2;
-
 const CustomMouse = () => {
   const { isHover } = useContext(MouseHoverContext);
 

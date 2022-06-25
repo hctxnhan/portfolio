@@ -7,18 +7,16 @@ import {
   TimelineItemContainer,
 } from './timeline-item.style';
 import { FunctionComponent } from 'react';
+import { TimelineItemType } from '../../data';
+
 type Props = {
-  heading: string;
-  description: string;
-  date: string;
-  right: boolean;
+  timelineItem: TimelineItemType;
+  right?: boolean;
 };
 
 const TimelineItem: FunctionComponent<Props> = ({
-  date,
-  description,
-  heading,
-  right,
+  timelineItem: { date, description, heading },
+  right = false,
 }) => {
   const variants = {
     init: {
@@ -36,6 +34,7 @@ const TimelineItem: FunctionComponent<Props> = ({
         variants={variants}
         initial={'init'}
         whileInView={'inView'}
+        viewport={{ once: true }}
         transition={{ duration: 0.8, type: 'tween' }}
       >
         <TimelineItemDate>{date}</TimelineItemDate>

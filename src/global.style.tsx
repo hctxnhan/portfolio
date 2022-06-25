@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     --color-primary: #131313;
     --color-secondary: #f5f5f5;
     --color-primary-light: #212121b8;
+    --color-grey: #a6a6a6;
 
     --font-size-heading: 6rem;   
     --font-size-large: 2rem; 
@@ -36,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
     font-family: var(--font-text);
+    scroll-behavior: smooth;
     }
 
   body {

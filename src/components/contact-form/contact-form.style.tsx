@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledContactForm = styled.div`
+export const StyledContactForm = styled.form`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -8,6 +8,9 @@ export const StyledContactForm = styled.div`
 
 export const ContactFormName = styled.div``;
 export const ContactFormEmail = styled.div``;
+export const ContactFormSubject = styled.div`
+  grid-column: 1/ 3;
+`;
 export const ContactFormMessage = styled.div`
   grid-column: 1/ 3;
 `;

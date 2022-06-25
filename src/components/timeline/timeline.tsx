@@ -8,9 +8,7 @@ function Timeline() {
         <TimelineItem
           right={index % 2 === 0 ? false : true}
           key={item.id}
-          date={item.date}
-          heading={item.heading}
-          description={item.description}
+          timelineItem={item}
         />
       ))}
     </StyledTimeline>

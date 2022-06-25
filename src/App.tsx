@@ -9,6 +9,7 @@ import NavigationBar from './components/navigation-bar/navigation-bar';
 import Contact from './components/contact/contact';
 import CustomMouse from './components/custom-mouse/custom-mouse';
 import MouseHoverContext from './context/hover/hover';
+import Works from './components/works/works';
 const App: FunctionComponent = () => {
   const [isHover, setHover] = useState(false);
 
@@ -19,9 +20,10 @@ const App: FunctionComponent = () => {
         <About />
         <Education />
         <Skills />
+        <Works />
         <Contact />
         <SocialMediaMenu />
-        <NavigationBar />
+        {/* <NavigationBar /> */}
         <CustomMouse />
       </MouseHoverContext.Provider>
     </div>

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 export const StyledSocialMediaItem = styled(motion.div)`
   display: flex;
   align-items: center;
-  backdrop-filter: blur(10px);
 `;
 export const SocialMediaItemIcon = styled.div`
   svg {

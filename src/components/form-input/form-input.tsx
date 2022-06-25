@@ -11,6 +11,8 @@ import FormInputFocusContext from '../../context/input';
 type Props = {
   children: string;
   type: FormInputType;
+  isRequired?: boolean;
+  name?: string;
 };
 
 export enum FormInputType {
@@ -26,13 +28,20 @@ const getFormInput = (type: FormInputType): typeof StyledFormInput =>
     [FormInputType.MULTILINE]: MessageFormInput,
   }[type]);
 
-const FormInput: FunctionComponent<Props> = ({ children, type }) => {
+const FormInput: FunctionComponent<Props> = ({
+  children,
+  type,
+  isRequired = false,
+  name,
+}) => {
   const hoverEvent = useHover();
   const { setFocus } = useContext(FormInputFocusContext);
   const CustomFormInput = getFormInput(type);
 
   return (
     <CustomFormInput
+      required={isRequired}
+      name={name}
       onFocus={() => setFocus?.(true)}
       onBlur={() => setFocus?.(false)}
       {...hoverEvent}

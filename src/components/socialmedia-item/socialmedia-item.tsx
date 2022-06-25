@@ -16,19 +16,10 @@ const SocialMediaItem: FunctionComponent<Props> = ({ children, link }) => {
     <StyledSocialMediaItem
       {...hoverEvent}
       whileHover={{
-        scale: 1.5,
+        scale: 1.8,
       }}
     >
       <SocialMediaItemIcon>{children}</SocialMediaItemIcon>
-      {/* <SocialMediaItemLink
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 5,
-        }}
-      >
-        {link}
-      </SocialMediaItemLink> */}
     </StyledSocialMediaItem>
   );
 };

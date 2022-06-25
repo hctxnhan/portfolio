@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import useHover from '../useHover/withHover';
 export const StyledNavigationBar = styled.div`
   position: fixed;
   top: 0;
@@ -11,8 +12,7 @@ export const StyledNavigationBar = styled.div`
   justify-content: center;
   gap: 3rem;
 `;
-
-export const NavigationBarDot = styled.div`
+const StyledNavigationBarDot = styled.div`
   content: '';
   width: 1rem;
   height: 1rem;
@@ -23,3 +23,8 @@ export const NavigationBarDot = styled.div`
     background-color: red;
   }
 `;
+
+export function NavigationBarDot() {
+  const hoverEvent = useHover();
+  return <StyledNavigationBarDot {...hoverEvent} />;
+}

@@ -7,14 +7,15 @@ import {
 } from './skill.style';
 import { FunctionComponent } from 'react';
 import { useState } from 'react';
-import { useViewportScroll } from 'framer-motion';
+import { SkillItemType } from '../../data';
 
 type SkillProps = {
-  name: string;
-  progress: number;
+  skill: SkillItemType;
 };
 
-const Skill: FunctionComponent<SkillProps> = ({ name, progress }) => {
+const Skill: FunctionComponent<SkillProps> = ({
+  skill: { name, progress },
+}) => {
   const [isHover, setIsHover] = useState(false);
   return (
     <StyledSkill>
@@ -23,9 +24,7 @@ const Skill: FunctionComponent<SkillProps> = ({ name, progress }) => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
         whileHover={{
-          rotateY: 40,
-          rotateX: -5,
-          scale: 1.5,
+          rotateX: 0,
         }}
         transition={{
           type: 'tween',

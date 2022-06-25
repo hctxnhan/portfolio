@@ -12,7 +12,7 @@ import Button from '../button/button';
 
 const About: FunctionComponent = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id='about'>
       <AboutInfo>
         <AboutInfoHeading>Hello.</AboutInfoHeading>
         <AboutInfoSubHeading>
@@ -22,12 +22,14 @@ const About: FunctionComponent = () => {
           What do you expect from a intern developer?
         </AboutInfoSubHeading>
         <AboutButtonContainer>
-          <Button>Contact me</Button>
+          <a href='#contact'>
+            <Button>Contact me</Button>
+          </a>
         </AboutButtonContainer>
       </AboutInfo>
       <AboutImage>
         <img
-          src='https://i.pinimg.com/736x/26/12/73/261273da88b3732c008a871d0284642b--men-photography-portrait-male-photography.jpg'
+          src='https://steamuserimages-a.akamaihd.net/ugc/1461932727948717834/9896854B4F6ABA0DCBA86E02AD7E66E5F6DBF5B1/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false'
           alt=''
         />
       </AboutImage>
