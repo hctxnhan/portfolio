@@ -14,6 +14,7 @@ import { WorkItemType } from '../../data';
 import { FunctionComponent } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { useState } from 'react';
+
 type Props = {
   work: WorkItemType;
 };

@@ -1,3 +1,10 @@
+import nexter from './img/nexter.png';
+import trillo from './img/trillo.png';
+import natours from './img/natours.png';
+import porfolio from './img/portfolio.png';
+import gitbattle from './img/github-battle.png';
+import player from './img/react-player.png';
+
 export type TimelineItemType = {
   id: number;
   date: string;
@@ -29,63 +36,54 @@ export const works: WorkItemType[] = [
       'Styled-Components',
       'Framer Motion',
     ],
-    link: '',
-    image: 'https://i.ytimg.com/vi/27JtRAI3QO8/maxresdefault.jpg',
+    link: 'https://github.com/hctxnhan/portfolio',
+    image: porfolio,
   },
   {
-    name: 'Crwn Clothing',
+    name: 'React Player',
     description:
-      'A clone of the e-commerce website Crwn. It is a ReactJS website.',
+      'A simplified music player created with ReactJS. With modern UI.',
     technologies: [
       'ReactJS',
-      'Typescript',
-      'Styled-Components',
       'Redux',
-      'Firebase',
-      'Redux-Saga',
-    ],
-    link: '',
-    image: 'https://i.ytimg.com/vi/27JtRAI3QO8/maxresdefault.jpg',
-  },
-  {
-    name: 'Portfolio',
-    description:
-      'A portfolio website for my self-introduction and portfolio. It is a ReactJS website.',
-    technologies: [
-      'ReactJS',
       'Typescript',
       'Styled-Components',
       'Framer Motion',
     ],
-    link: '',
-    image:
-      'https://camo.githubusercontent.com/cc90d480f6800e512bfba7a7e1cb203eda57d67c0fb4644660b11bd158d9d2e1/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f54683357616c6c2f6173736574732d63646e2f4352574e436c6f7468696e672f43726f776e436c6f7468696e675f726561646d652e706e67',
+    link: 'https://github.com/hctxnhan/reactplayer',
+    image: player,
   },
   {
-    name: 'Portfolio',
+    name: 'Git Battle',
     description:
-      'A portfolio website for my self-introduction and portfolio. It is a ReactJS website.',
-    technologies: [
-      'ReactJS',
-      'Typescript',
-      'Styled-Components',
-      'Framer Motion',
-    ],
-    link: '',
-    image: 'https://i.ytimg.com/vi/27JtRAI3QO8/maxresdefault.jpg',
+      'A website to compare 2 github repositories based on stars, forks, opens.',
+    technologies: ['ReactJS', 'SCSS', 'JavaScript, HTML, CSS'],
+    link: 'https://github.com/hctxnhan/gitbattle',
+    image: gitbattle,
   },
   {
-    name: 'Portfolio',
+    name: 'Nexter',
     description:
-      'A portfolio website for my self-introduction and portfolio. It is a ReactJS website.',
-    technologies: [
-      'ReactJS',
-      'Typescript',
-      'Styled-Components',
-      'Framer Motion',
-    ],
-    link: '',
-    image: 'https://i.ytimg.com/vi/27JtRAI3QO8/maxresdefault.jpg',
+      'A website belongs to a Advanced SASS course. Used CSS Grid and Flexbox and responsive design.',
+    technologies: ['HTML', 'CSS', 'SCSS'],
+    link: 'https://github.com/hctxnhan/nexter',
+    image: nexter,
+  },
+  {
+    name: 'Natours',
+    description:
+      'This website also belongs to a Advanced SASS course. Used CSS Grid and Flexbox and responsive design.',
+    technologies: ['HTML', 'CSS', 'SCSS'],
+    link: 'https://github.com/hctxnhan/natours',
+    image: natours,
+  },
+  {
+    name: 'Trillo',
+    description:
+      'A website belong to a the same course with the Nexter project. Used CSS Grid and Flexbox and responsive design.',
+    technologies: ['HTML', 'CSS', 'SCSS'],
+    link: 'https://github.com/hctxnhan/trillo',
+    image: trillo,
   },
 ];
 
